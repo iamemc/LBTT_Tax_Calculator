@@ -2,7 +2,13 @@
 
 
 
-[![USE THE TOOL](./use-tool.png)](https://iamemc.github.io/LBTT_Tax_Calculator/)
+## 🧮 LBTT Tax Calculator
+
+<p align="center">
+  <a href="https://iamemc.github.io/LBTT_Tax_Calculator/">
+    <img src="./use-tool.png" alt="Use the LBTT Tax Calculator" width="800">
+  </a>
+</p>
 
 
 
