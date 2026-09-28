@@ -1,6 +1,6 @@
 # LBTT (Land and Buildings Transaction Tax) Tax Calculator
 
-[![USE THE TOOL]](https://iamemc.github.io/LBTT_Tax_Calculator)
+[![USE THE TOOL](./use-tool.png)](https://iamemc.github.io/LBTT_Tax_Calculator/)
 
 ## What is LBTT?
 
