@@ -1,0 +1,270 @@
+/* Modern, Professional Design for LBTT Calculator */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #0066cc 0%, #004c99 100%);
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Content Section */
+.content {
+    margin-bottom: 30px;
+}
+
+/* Calculator Section */
+.calculator-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+/* Tax Info Panel */
+.tax-info {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.tax-info h2 {
+    color: #0066cc;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.tax-bands {
+    margin-bottom: 20px;
+}
+
+.band {
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background: #f0f8ff;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+}
+
+.band:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 102, 204, 0.15);
+    background: #e6f3ff;
+}
+
+.band[data-rate="0"] { background: #e8f5e9; }
+.band[data-rate="2"] { background: #fff3e0; }
+.band[data-rate="5"] { background: #fff3e0; }
+.band[data-rate="10"] { background: #ffebee; }
+.band[data-rate="12"] { background: #ffebee; }
+
+/* Calculator Form */
+.calculator-form {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.calculator-form h2 {
+    color: #0066cc;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+input[type="number"]:focus {
+    border-color: #0066cc;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+    background-color: white;
+}
+
+.calculate-btn {
+    background: linear-gradient(135deg, #0066cc 0%, #004c99 100%);
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.2);
+}
+
+.calculate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 102, 204, 0.3);
+}
+
+.calculate-btn:active {
+    transform: translateY(0);
+}
+
+/* Result Container */
+.result-container {
+    margin-top: 25px;
+    padding: 25px;
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    border-radius: 8px;
+    display: none;
+    border-left: 5px solid #4caf50;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.result-container h3 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+#taxResult {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #2e7d32;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.result-details {
+    background: white;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 15px;
+}
+
+.result-details p {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.result-details strong {
+    color: #0066cc;
+}
+
+/* Footer */
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .calculator-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .hero {
+        padding: 20px 15px;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .calculator-form, .tax-info {
+        padding: 20px;
+    }
+    
+    .band {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+}
+
+/* Visual feedback for inputs */
+input[type="number"] {
+    transition: all 0.3s ease;
+}
+
+input[type="number"]:valid {
+    border-color: #4caf50;
+}
+
+input[type="number"]:invalid {
+    border-color: #f44336;
+}

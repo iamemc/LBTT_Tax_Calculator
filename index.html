@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LBTT Tax Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="hero">
+            <h1>LBTT Tax Calculator</h1>
+            <p>Calculate Scottish Land and Buildings Transaction Tax</p>
+        </header>
+
+        <main class="content">
+            <section class="calculator-section">
+                <div class="tax-info">
+                    <h2>How LBTT Works</h2>
+                    <div class="tax-bands">
+                        <div class="band" data-rate="0">Up to £145,000: 0%</div>
+                        <div class="band" data-rate="2">£145,001 to £250,000: 2%</div>
+                        <div class="band" data-rate="5">£250,001 to £325,000: 5%</div>
+                        <div class="band" data-rate="10">£325,001 to £750,000: 10%</div>
+                        <div class="band" data-rate="12">Over £750,000: 12%</div>
+                    </div>
+                    <p>LBTT is calculated progressively across these bands.</p>
+                </div>
+
+                <div class="calculator-form">
+                    <h2>Calculate Your Tax</h2>
+                    <form id="taxCalculator">
+                        <div class="input-group">
+                            <label for="propertyValue">Property Value (£)</label>
+                            <input type="number" id="propertyValue" name="propertyValue" min="0" step="1000" placeholder="Enter property value" required>
+                        </div>
+                        <button type="submit" class="calculate-btn">Calculate LBTT</button>
+                    </form>
+
+                    <div id="result" class="result-container">
+                        <h3>Calculation Result</h3>
+                        <p id="taxResult"></p>
+                        <div class="result-details">
+                            <p><strong>Property Value:</strong> <span id="propertyValueDisplay"></span></p>
+                            <p><strong>LBTT Tax:</strong> <span id="taxAmountDisplay"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>&copy; 2026 LBTT Tax Calculator | For Educational Purposes</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
