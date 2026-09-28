@@ -72,7 +72,6 @@ python LBTT_Tax_Calculator_test_suite.py
 ## Requirements
 
 - Python 3.x
-- Standard library modules (locale, math, csv, os)
 
 ## License
 
