@@ -1,5 +1,7 @@
 # LBTT (Land and Buildings Transaction Tax) Tax Calculator
 
+[![USE THE TOOL]](https://iamemc.github.io/LBTT_Tax_Calculator)
+
 ## What is LBTT?
 
 Land and Buildings Transaction Tax (LBTT) is a Scottish tax applied to residential and commercial land and buildings transactions. It replaced UK Stamp Duty Land Tax (SDLT) in Scotland from 1 April 2015.
