@@ -73,6 +73,11 @@ python LBTT_Tax_Calculator_test_suite.py
 
 - Python 3.x
 
+## Author
+
+Eduardo Carvalho | 2022
+
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
